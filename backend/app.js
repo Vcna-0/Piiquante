@@ -1,4 +1,4 @@
-//require('dotenv').config();  il sera bien de l'utiliser plus tard pour ne pas avoir à écrire en dur des choses comme le mot de passe mongoDb
+require('dotenv').config();
 const express = require('express');
 const mongoose= require('mongoose');
 const path = require('path');
@@ -9,12 +9,11 @@ const userRoutes = require('./routes/user');
 const app = express();
 
 //CONNEXION A MONGODB
-mongoose.connect('mongodb+srv://piquante:ZEtZuIXqWM6DaQLS@piquante.joqv1wo.mongodb.net/?retryWrites=true&w=majority',
+mongoose.connect(process.env.MONGODB_URI,
   { useNewUrlParser: true,
     useUnifiedTopology: true })
   .then(() => console.log('Connexion à MongoDB réussie !'))
   .catch(() => console.log('Connexion à MongoDB échouée !'));
-
   
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*'); //Autorise l'accès à l'API pour n'importe quelle origine (sinon erreurs CORS)
