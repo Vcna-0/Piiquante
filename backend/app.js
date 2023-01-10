@@ -22,7 +22,7 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use(express.json());    //body-parser présent dans express. Permet de lire le contenu JSON renvoyé par les requêtes POST
+app.use(express.json());   //Permet de lire le contenu JSON renvoyé par les requêtes POST
 
 
 app.use('/api/sauces', sauceRoutes);
