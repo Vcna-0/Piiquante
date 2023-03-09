@@ -13,6 +13,7 @@ Ma solution au **PROJET 6 - Construisez une API sécurisée pour une application
   - [Éléments fournis pour la réalisation du projet](#éléments-fournis-pour-la-réalisation-du-projet)
 - [Mon processus](#mon-processus)
   - [Outils et technologies utilisés](#outils-et-technologies-utilisés)
+  - [Compétences évaluées](#compétences-évaluées)
 - [Auteur](#auteur)
 
 
